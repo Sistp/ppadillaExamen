@@ -20,9 +20,13 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
 
             <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -67,17 +71,39 @@ Grid.Column="1"
 
             <Label Text="Monto"
  FontSize="18"
- Grid.Row="2"
+ Grid.Row="4"
  Grid.Column="0" 
 />
             <Entry 
 x:Name="txtMonto"
 Placeholder="Ingrese Monto Inicial"
-Grid.Row="2"
+Grid.Row="4"
 Grid.Column="1" 
  />
 
+            <Label Text="Pago Mensual"
+ FontSize="18"
+ Grid.Row="5"
+ Grid.Column="0" 
+/>
+            <Entry 
+x:Name="txtPago"
+Placeholder="Pago mensual"
+Grid.Row="5"
+Grid.Column="1" 
+ />
+
+            
+
         </Grid>
+
+        <Label></Label>
+        <Label></Label>
+
+        <StackLayout Spacing="20" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+            <Button x:Name="btnIniciar" Text="Calcular Pago" Clicked="btnIniciar_Clicked" />
+            <Button x:Name="btnAcerca" Text="Ver Resumen" Clicked="btnAcerca_Clicked" />
+        </StackLayout>
 
     </VerticalStackLayout>
 </ContentPage>
