@@ -13,8 +13,8 @@ public partial class Login : ContentPage
         string contraseña = "uisrael2024";
         string usuario2 = "examen1";
         string contraseña2 = "parcial1";
-        string usuario3 = "Paul Padilla";
-        string contraseña3 = "2024";
+        string usuario3 = "ppadilla";
+        string contraseña3 = "2023";
 
         if (txtUsuario.Text == usuario && txtContrasena.Text == contraseña)
         {

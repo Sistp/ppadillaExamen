@@ -47,9 +47,9 @@
     IsPassword="True"
      />
         </Grid>
+        
 
-
-      <StackLayout Spacing="20" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+        <StackLayout Spacing="20" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
             <Button x:Name="btnIniciar" Text="INICIAR SESION" Clicked="btnIniciar_Clicked" />
             <Button x:Name="btnAcerca" Text="ACERCA DE" Clicked="btnAcerca_Clicked" />
         </StackLayout>

@@ -4,16 +4,19 @@
              x:Class="ppadillaExamen.Vistas.Registros"
              Title="Registros">
     <VerticalStackLayout>
-        <Label x:Name="lblUsuario"
-           TextColor="RED"
-           HorizontalTextAlignment="End"
-         />
-
-        <Label Text="REGISTRO"
-               TextColor="Blue"
-           FontSize="22"
-           HorizontalTextAlignment="Center"/>
-
+        <Label 
+             x:Name="lblUsuario"
+             FontSize="20"
+             FontAttributes="Bold"
+             TextColor="Blue"
+   />
+        <Label 
+            Text="REGISTRO "
+            HorizontalTextAlignment="Start"
+            FontSize="20"
+            FontAttributes="Bold"
+            TextColor="red"
+   />
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
@@ -23,110 +26,120 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-           
 
             <Label Text="Fecha"
-    FontSize="18"
-    Grid.Row="0"
-    Grid.Column="0" 
-/>
-            <Entry 
-    x:Name="txtfecha"
-    Placeholder="Ingrese una fecha"
-    Grid.Row="0"
-    Grid.Column="1" 
-    />
-            <Label Text="Pais"
-     FontSize="18"
-     Grid.Row="1"
-     Grid.Column="0" 
-    />
-            <Entry 
-    x:Name="txtPais"
-    Placeholder="Ingrese Pais"
-    Grid.Row="1"
-    Grid.Column="1" 
-     />
+           FontSize="18"
+           Grid.Row="0"
+           Grid.Column="0" />
+            <DatePicker x:Name="datePicker"
+                Grid.Row="0"
+                Grid.Column="1" />
+
+            <Label Text="País"
+           FontSize="18"
+           Grid.Row="1"
+           Grid.Column="0" />
+            <Picker x:Name="pickerPais"
+            Grid.Row="1"
+            Grid.Column="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Ecuador</x:String>
+                        <x:String>Mexico</x:String>
+                        <x:String>Peru</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
             <Label Text="Ciudad"
- FontSize="18"
- Grid.Row="3"
- Grid.Column="0" 
-/>
-            <Entry 
-x:Name="txtCiudad"
-Placeholder="Ingrese Ciudad"
-Grid.Row="3"
-Grid.Column="1" 
- />
+           FontSize="18"
+           Grid.Row="2"
+           Grid.Column="0" />
+            <Picker x:Name="pickerCiudad"
+            Grid.Row="2"
+            Grid.Column="1">
+                <Picker.ItemsSource>
+                    <x:Array Type="{x:Type x:String}">
+                        <x:String>Quito</x:String>
+                        <x:String>Cancun</x:String>
+                        <x:String>Lima</x:String>
+                    </x:Array>
+                </Picker.ItemsSource>
+            </Picker>
 
-            <Label Text="Monto"
- FontSize="18"
- Grid.Row="4"
- Grid.Column="0" 
-/>
-            <Entry 
-x:Name="txtMonto"
-Placeholder="Ingrese Monto Inicial"
-Grid.Row="4"
-Grid.Column="1" 
- />
+            <Label Text="Monto Inicial"
+           FontSize="18"
+           Grid.Row="3"
+           Grid.Column="0" />
+            <Entry x:Name="txtMontoInicial"
+                   Keyboard="Numeric"
+           Grid.Row="3"
+           Grid.Column="1" />
+
 
             <Label Text="Pago Mensual"
- FontSize="18"
- Grid.Row="5"
- Grid.Column="0" 
-/>
-            <Entry 
-x:Name="txtPago"
-Placeholder="Pago mensual"
-Grid.Row="5"
-Grid.Column="1" 
- />
-   
+           FontSize="18"
+           Grid.Row="4"
+                   
+           Grid.Column="0" />
+            <Entry x:Name="txtPagoMensual"
+           Grid.Row="4"
+           Grid.Column="1"
+           IsEnabled="False" />
+
 
         </Grid>
-
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
-                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
-                <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
-            
-            
-            
-            
+
+            <Label Text="Nombre"
+           FontSize="18"
+           Grid.Row="0"
+           Grid.Column="0" />
+            <Entry x:Name="txtNombre"
+           Placeholder="Ingrese nombre"
+           Grid.Row="1"
+           Grid.Column="0" />
+
+            <Label Text="Apellido"
+           FontSize="18"
+           Grid.Row="0"
+           Grid.Column="1" />
+            <Entry x:Name="txtApellido"
+           Placeholder="Ingrese apellido"
+           Grid.Row="1"
+           Grid.Column="1" />
+
+            <Label Text="Edad"
+           FontSize="18"
+           Grid.Row="0"
+           Grid.Column="2" />
+            <Entry x:Name="txtEdad"
+           Placeholder="Ingrese edad"
+                   Keyboard="Numeric"
+           Grid.Row="1"
+           Grid.Column="2" />
+
         </Grid>
-
-
-        <Label></Label>
-        <Label></Label>
-
         <StackLayout Spacing="20" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
-            <Button x:Name="btnIniciar" Text="Calcular Pago" Clicked="btnIniciar_Clicked" />
-            <Button x:Name="btnAcerca" Text="Ver Resumen" Clicked="btnAcerca_Clicked" />
+            
+            <StackLayout Spacing="20" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                <Button x:Name="btnPago" Text="CALCULAR PAGO" Clicked="btnPago_Clicked" />
+                <Button x:Name="btnResumen" Text="Resumen" Clicked="btnResumen_Clicked" />
+            </StackLayout>
         </StackLayout>
 
     </VerticalStackLayout>
