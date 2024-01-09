@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ppadillaExamen.Vistas.Registros"
+             Title="Registros">
+    <VerticalStackLayout>
+        <Label x:Name="lblUsuario"
+           TextColor="RED"
+           HorizontalTextAlignment="End"
+         />
+
+        <Label Text="REGISTRO"
+               TextColor="Blue"
+           FontSize="22"
+           HorizontalTextAlignment="Center"/>
+
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+           
+
+            <Label Text="Fecha"
+    FontSize="18"
+    Grid.Row="0"
+    Grid.Column="0" 
+/>
+            <Entry 
+    x:Name="txtfecha"
+    Placeholder="Ingrese una fecha"
+    Grid.Row="0"
+    Grid.Column="1" 
+    />
+            <Label Text="Pais"
+     FontSize="18"
+     Grid.Row="1"
+     Grid.Column="0" 
+    />
+            <Entry 
+    x:Name="txtPais"
+    Placeholder="Ingrese Pais"
+    Grid.Row="1"
+    Grid.Column="1" 
+     />
+
+            <Label Text="Ciudad"
+ FontSize="18"
+ Grid.Row="3"
+ Grid.Column="0" 
+/>
+            <Entry 
+x:Name="txtCiudad"
+Placeholder="Ingrese Ciudad"
+Grid.Row="3"
+Grid.Column="1" 
+ />
+
+            <Label Text="Monto"
+ FontSize="18"
+ Grid.Row="2"
+ Grid.Column="0" 
+/>
+            <Entry 
+x:Name="txtMonto"
+Placeholder="Ingrese Monto Inicial"
+Grid.Row="2"
+Grid.Column="1" 
+ />
+
+        </Grid>
+
+    </VerticalStackLayout>
+</ContentPage>
