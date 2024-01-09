@@ -6,16 +6,16 @@
     <VerticalStackLayout>
         <Label 
              x:Name="lblUsuario"
-             FontSize="20"
+             FontSize="15"
              FontAttributes="Bold"
-             TextColor="Blue"
+             TextColor="red"
    />
         <Label 
             Text="REGISTRO "
-            HorizontalTextAlignment="Start"
-            FontSize="20"
+            HorizontalTextAlignment="Center"
+            FontSize="22"
             FontAttributes="Bold"
-            TextColor="red"
+            TextColor="blue"
    />
         <Grid>
             <Grid.RowDefinitions>

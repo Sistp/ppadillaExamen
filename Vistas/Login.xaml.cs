@@ -14,7 +14,7 @@ public partial class Login : ContentPage
         string usuario2 = "examen1";
         string contraseña2 = "parcial1";
         string usuario3 = "ppadilla";
-        string contraseña3 = "2023";
+        string contraseña3 = "2024";
 
         if (txtUsuario.Text == usuario && txtContrasena.Text == contraseña)
         {
